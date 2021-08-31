@@ -1,5 +1,3 @@
 # My Portfolio
 
-## Michael Olson
-
-### Site Reliability Engineer
+https://michaelolson1996.github.io/portfolio/
