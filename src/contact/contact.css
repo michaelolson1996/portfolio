@@ -1,0 +1,135 @@
+.contact-wrap {
+    height:100vh;
+    width:100vw;
+    background-color:rgb(26, 25, 25);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-title {
+    /* text-align:center; */
+    margin:0;
+    text-align:center;
+    /* margin-top:30px; */
+    margin-bottom:40px;
+}
+
+.contact-form-container {
+    /* display:inline-block; */
+    margin-top:30px;
+    height:auto;
+    width:auto;
+}
+
+.contact-form-p-tags {
+    display:inline-block;
+    font-size:1.2em;
+}
+
+.contact-inputs {
+    background-color:rgb(26, 25, 25);
+    border:none;
+    outline:none;
+    color:white;
+    width:auto;
+    font-size:1.2em;
+    /* margin-left:10px; */
+    padding-left:20px;
+    border-bottom:.5px solid white;
+    padding-bottom:2px;
+}
+
+.contact-inputs:focus {
+    border-bottom:1px solid rgb(31, 125, 247);
+
+}
+
+.phone-input-contact {
+    margin-left:5px;
+}
+
+.select-containers {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    margin-left:20px;
+    margin-right:20px;
+    height:35px;
+    width:auto;
+    font-family:Source Code Pro;
+    color:white;
+    border:none;
+    background-color:transparent;
+    border-radius:0;
+    outline: none;
+    border-bottom:.5px solid white;
+    font-size:1.2em;
+    overflow:scroll;
+}
+
+.select-containers:hover {
+    cursor:pointer;
+    padding-bottom: 10px;
+    border-bottom:1px solid rgb(31, 125, 247);
+}
+
+.phone-input-contact::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.phone-input-contact {
+    -moz-appearance: textfield;
+}
+
+#times {
+    width:82px;
+}
+
+.periods {
+    position:relative;
+    top:5px;
+}
+
+.form-button-container {
+    height:60px;
+    width:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.form-contact-submit {
+    width:150px;
+    height:40px;
+    margin-top:50px;
+    align-self:center;
+    outline:none;
+    background-color:transparent;
+    color:white;
+    text-transform:uppercase;
+    border:none;
+    font-size:1.2em;
+}
+
+.form-contact-submit:hover {
+    cursor:pointer;
+    /* color:rgb(31, 125, 247); */
+    /* text-decoration: underline; */
+    border:1px solid rgb(31, 125, 247);
+}
+
+.reason-input-contact {
+    /* width:280px; */
+}
+
+.about-bottom-icons-container-contact {
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-50%);
+}

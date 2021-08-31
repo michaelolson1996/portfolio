@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+@keyframes slideInFromLeftAbout {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(350%);
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+.about-wrap {
+    height:auto;
+    width:100vw;
+    background-color:rgb(26, 25, 25);
+}
+
+.page-1-bg {
+    height:100vh;
+    min-height:400px;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-michael-home-link {
+    position: fixed;
+}
+
+.bulb {
+    position:absolute;
+    color:rgba(255, 255, 255, 0.081);
+    font-size:20em;
+}
+
+.bulb:hover {
+    color:rgba(255, 255, 255, 0.051);
+    cursor: auto;
+}
+
+.thomas-edison-quote-main-container {
+    height:10vh;
+    min-height:73px;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:sticky;
+}
+
+.thomas-edison-quote-inner-container {
+    height:70px;
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    font-family:Quicksand;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:white;
+}
+
+q {
+    animation: .7s ease-in-out 0s 1 slideInFromLeftAbout;
+    font-size:2em;
+}
+
+.found-blue {
+    color: rgb(31, 125, 247);
+}
+
+
+.thomas-jefferson {
+    margin:0;
+    font-size: 1.2em;
+    animation: .7s ease-in-out 0s 1 slideInFromRight;
+}
+
+.fa-angle-down {
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.page-2-about {
+    height:100vh;
+    min-height:800px;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.page-2-about-skills-container {
+    height:500px;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    margin:15px;
+}
+
+.skills-boxes {
+    height:220px;
+    width:305px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    color:white;
+    font-family:Quicksand;
+}
+
+.shape-containers {
+    height:100px;
+    width:250px;
+}
+
+.box1-shape-container {
+    display:flex;
+    justify-content:space-around;
+}
+
+.box2-shape-container {
+    width:300px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.box3-shape-container {
+    display:flex;
+    justify-content:space-around;
+}
+
+.box4-shape-container {
+    display:flex;
+    justify-content:space-around;
+}
+
+.triangle1 {
+    height:0;
+    width:0;
+    border-bottom:100px solid rgb(231, 135, 62);
+    border-right:50px solid transparent;
+    border-left:50px solid transparent;
+}
+
+.triangle2 {
+    height:0;
+    width:0;
+    border-bottom:60px solid rgb(231, 135, 62);
+    border-left:30px solid transparent;
+    border-right:30px solid transparent;
+}
+
+.triangle3 {
+    height:0;
+    width:0;
+    border-bottom:30px solid rgb(231, 135, 62);
+    border-left: 15px solid transparent;
+    border-right:15px solid transparent;
+}
+
+.box2-shape-container {
+    display:flex;
+    justify-content:space-around;
+}
+
+.squares {
+    height: 70px;
+    width:70px;
+    background-color:rgb(219, 56, 50);
+}
+
+.square2 {
+    height:35px;
+    width:35px;
+}
+
+.hexagon {
+    height:100px;
+    width:300px;
+    border:5px solid rgb(40, 101, 172);
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
+}
+
+.inner-square {
+    height:45px;
+    width:45px;
+    background-color:rgb(26, 25, 25);
+    position:relative;
+    bottom:5px;
+    left:5px;
+    border-left:5px solid rgb(40, 101, 172);
+    border-bottom:5px solid rgb(40, 101, 172);
+    justify-self:flex-end;
+    align-self:flex-start;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+
+.inner-square-2 {
+    height:45px;
+    width:45px;
+    background-color:rgb(26, 25, 25);
+    position:relative;
+    right:145px;
+    top:55px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
+    border-top:5px solid rgb(40, 101, 172);
+    border-right:5px solid rgb(40, 101, 172);
+}
+
+.inner-inner-square-2 {
+    height:20px;
+    width:20px;
+    position:relative;
+    bottom:5px;
+    left:5px;
+    background-color:rgb(26, 25, 25);
+    border-right:5px solid rgb(26, 25, 25);
+    border-top:5px solid rgb(26, 25, 25);
+}
+
+.inner-inner-square {
+    height:20px;
+    width:20px;
+    position:relative;
+    top:5px;
+    right:5px;
+    background-color:rgb(26, 25, 25);
+    border-left:5px solid rgb(26, 25, 25);
+    border-bottom:5px solid rgb(26, 25, 25);
+}
+
+.box3-shape-container {
+    width:300px;
+    height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.inner-boxes-functionality {
+    height:99px;
+    width:99px;
+    display:flex;
+}
+
+.functionality-rows {
+    width:33px;
+    height:99px;
+    display:flex;
+}
+
+.row-1-circle {
+    justify-content:center;
+    align-items:center;
+}
+
+.row-2-circles {
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.circles {
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-color:rgb(73, 161, 101);
+}
+
+.about-text-containers {
+    height:50px;
+    text-align:center;
+}
+
+.box-titles {
+    text-transform:uppercase;
+    text-align:center;
+    letter-spacing:1px;
+}
+
+.page-3-wrap {
+    height:100vh;
+    min-height:800px;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.empty-space-1 {
+    height:50px;
+    width:100%;
+}
+
+.about-page-3-line {
+    height:3px;
+    width:14px;
+    background-color:rgb(31, 125, 247);
+    border-radius:3px;
+}
+
+.page-3-about-me {
+    /* height:auto; */
+    width:1000px;
+    text-align:center;
+    font-family:Quicksand;
+    letter-spacing:1px;
+    line-height: 1.4em;
+    font-weight:500;
+    color:rgb(224, 224, 224);
+    font-size:1.1em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:10px;
+}
+
+.about-bottom-icons-container {
+    height:50px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.about-icons {
+    color:gray;
+    margin-left:20px;
+    margin-right:20px;
+    font-size:2em;
+    opacity:0.2;
+}
+
+form {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.contact-form-lines {
+    height:76px;
+}
+
+@media only screen and (max-width:1250px) {
+    .page-2-about-skills-container {
+        height:750px;
+    }
+}
+
+@media only screen and (max-width:1050px) {
+    .page-3-about-me {
+        width:90%;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    q {
+        font-size:1.9em;
+    }
+
+    .thomas-jefferson {
+        font-size: 1.15em;
+    }
+
+    .thomas-edison-quote-inner-container {
+        /* background-color: white; */
+        height:60px;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .page-1-bg {
+        height:100vh;
+        min-height:400px;
+        width:100vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .page-2-about-skills-container {
+        height:700px;
+    }
+    
+    .thomas-edison-quote-main-container {
+        height:10vh;
+        min-height:73px;
+        width:100vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        /* background-color:black; */
+    }
+    
+    .thomas-edison-quote-inner-container {
+        /* background-color: white; */
+        height:60px;
+        width:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+        font-family:Quicksand;
+        font-weight:bold;
+        letter-spacing:1px;
+        color:white;
+    }
+
+    q {
+        font-size:1.8em;
+        margin:0;
+    }
+    
+    .thomas-jefferson {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    q {
+        font-size:1.7em;
+    }
+
+    .thomas-jefferson {
+        font-size: 1em;
+        margin-top:0;
+    }
+
+    .thomas-edison-quote-inner-container {
+        height:55px;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    q {
+        font-size:1.6em;
+    }
+    
+    .thomas-jefferson {
+        font-size: .9em;
+    }
+
+    .thomas-edison-quote-inner-container {
+        height:53px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    q {
+        font-size:1.5em;
+    }
+    
+    .thomas-jefferson {
+        font-size: .8em;
+    }
+
+    .thomas-edison-quote-inner-container {
+        height:48px;
+    }
+
+    .page-3-about-me {
+        height:650px;
+        /* letter-spacing:.8px; */
+        /* line-height: 1.2em; */
+        margin-top:0px;
+    }
+
+    .page-3-wrap {
+        height:800px;
+        justify-content:flex-start;
+    }
+
+    p {
+        margin:7px;
+    }
+
+    .about-bottom-icons-container {
+        position:relative;
+        bottom:-50px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    q {
+        font-size:1.4em;
+    }
+    
+    .thomas-jefferson {
+        font-size: .7em;
+    }
+
+    .page-3-wrap {
+        height:840px;
+    }
+
+    .page-3-about-me {
+        height:700px;
+    }
+
+    .about-bottom-icons-container {
+        bottom:-40px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    q {
+        font-size:1.3em;
+    }
+
+    .page-3-wrap {
+        /* height:950px; */
+    }
+}
+
+@media only screen and (max-width:650px) {
+    q {
+        font-size:1.2em;
+    }
+
+    .page-2-about {
+        height:1400px;
+        justify-content:flex-start;
+
+    }
+
+    .skills-boxes {
+        margin-top:50px;
+    }
+
+    .page-2-about-skills-container {
+        height:1200px;
+        justify-content:space-around;
+    }
+
+    .page-3-wrap {
+        height:900px;
+    }
+
+    .page-3-about-me {
+        height:800px;
+        margin:0;
+    }
+
+    .about-page-3-line {
+        height:5px;
+        margin:10px;
+    }
+
+    .about-me-title {
+        margin:5px;
+    }
+
+    .about-bottom-icons-container {
+        margin:0;
+    }
+}
+
+@media only screen and (max-width:610px) {
+    .page-2-about {
+        height:1300px;
+    }
+
+    .page-2-about-skills-container {
+        height:1200px;
+    }
+
+    .page-3-wrap {
+        height:1200px;
+    }
+
+    .page-3-about-me {
+        height:700px;
+    }
+
+    .skills-boxes {
+        justify-content:center;
+        width:306px;
+    }
+
+    .shape-containers {
+        height:120px;
+        width:250px;
+    }
+
+    q {
+        font-size:1em;
+    }  
+
+    .thomas-edison-quote-inner-container {
+        height:40px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .found-blue {
+        display:block;
+        animation: .7s ease-in-out 0s 1 slideInFromRight;
+    }
+
+    .thomas-edison-quote-inner-container {
+        text-align:center;
+        height:80px;
+    }
+
+    .thomas-edison-quote-main-container {
+        height:100px;
+    }
+
+    q {
+        font-size:1.2em;
+        margin-bottom:20px;
+    }
+
+    .thomas-jefferson {
+        font-size: .9em;
+    }
+
+    .page-3-wrap {
+        height:800px;
+        justify-content:flex-start;
+        margin-top:60px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .page-3-about-me {
+        height:1000px;
+    } 
+}

@@ -1,0 +1,119 @@
+.projects-container {
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+}
+
+.projects-wrap {
+    height:100vh;
+    width:100vw;
+    background-color:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+canvas {
+    z-index:100;
+}
+
+.project-titles {
+    position: absolute;
+    height:80px;
+    width:200px;
+    /* background-color:white; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.project-titles:hover {
+    cursor:pointer;
+    color:white;
+}
+
+.material-container {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.middle-container {
+    height:300px;
+    width:400px;
+    background:rgba(26, 25, 25, 0.7);
+    border:1px solid white;
+    border-radius: 15px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    margin:50px;
+    box-sizing:border-box;
+}
+
+.middle-container:hover {
+    cursor:pointer;
+    border:2px solid white;
+    background:rgba(26, 25, 25, 1);
+    padding:9px;
+}
+
+.arrows {
+    position:relative;
+    color:white;
+}
+
+.arrows:hover {
+    color:white;
+}
+
+.project-title {
+    margin-bottom:0;
+    margin-top:5px;
+}
+
+.project-description {
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.languages-container {
+    height:180px;
+    margin:0;
+    list-style:none;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.michael-project-pictures {
+    position:absolute;
+}
+
+.michael-pic-projects {
+    z-index:10000;
+    top:20px;
+    right:30px;
+    height:50px;
+    width:50px;
+    background-image:url("../image/michael.jpg");
+    background-size: 104px;
+    background-position: center;
+    background-position-y: -5px;
+    background-repeat:no-repeat;
+    border-radius:50%;
+}
+
+
+
+
+
