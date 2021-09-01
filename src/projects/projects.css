@@ -1,8 +1,29 @@
 .projects-container {
+    /* height:100vh;
+    width:100vw;
+    overflow:hidden; */
+    position:absolute;
+    top:0;
+    left:0;
     height:100vh;
     width:100vw;
-    overflow:hidden;
+    background-color:rgb(26, 25, 25);
+    background-position: center;
+    background-size: cover;
+    z-index:-100;
 }
+
+.fixed-background-picture {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color:rgb(26, 25, 25);
+    background-position: center;
+    background-size: cover;
+    z-index:-100;
+  }
 
 .projects-wrap {
     height:100vh;

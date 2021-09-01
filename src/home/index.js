@@ -1,16 +1,18 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+const generateTerminal = () => {
+
+}
 
 const Home = () => {
     return (
-        
       <div className = "portfolio-content-wrap">
         <div className = "fixed-background-picture"></div>
         <div className = "icon-container-main">
           <i class="fab fa-github-alt" onClick = {() => window.open("https://github.com/michaelolson1996", "_blank")}>
             <span className = "tooltips"><p>GitHub</p></span>
           </i>
-          
           <i class="fab fa-linkedin" onClick = {() => window.open("https://www.linkedin.com/in/michael-olson-sre", "_none")}>
             <span className = "tooltips"><p>Linkedin</p></span>
           </i>
@@ -40,8 +42,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-    </div>
+      </div>
     )
 }
 

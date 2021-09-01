@@ -1,7 +1,9 @@
-import React, {Component} from 'react'
-import './projects.css'
-import StarsContainer from './StarsContainer'
-import CirclesContainer from './CirclesContainer'
+import React, {Component} from 'react';
+import './projects.css';
+// import StarsContainer from './StarsContainer';
+// import CirclesContainer from './CirclesContainer';
+import Terminal from './Terminal';
+import TerminalOptions from './Terminal/TerminalOptions';
 
 class Projects extends Component {
     constructor() {
@@ -40,7 +42,12 @@ class Projects extends Component {
         console.log(this.state)
         return (
             <React.Fragment>
-                {
+                    <div className = "projects-container">
+                        <Terminal />
+                        <TerminalOptions />
+                    </div>
+
+                {/* {
                     this.state.pageDisplayed === 0 ?
                         <CirclesContainer toggleRight = {this.toggleRight} toggleLeft = {this.toggleLeft} />
                     :
@@ -48,10 +55,7 @@ class Projects extends Component {
                             <StarsContainer toggleRight = {this.toggleRight} toggleLeft = {this.toggleLeft} />
                         :
                             <div>hello</div>
-                }
-
-                    {/* <StarsContainer />
-                    <CirclesContainer /> */}
+                } */}
             </React.Fragment>
         )
     }
