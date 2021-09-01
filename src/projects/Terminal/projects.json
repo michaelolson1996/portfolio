@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Flash Stacks",
+        "url": "https://www.flashstacks.herokuapp.com",
+        "description": "A web application for users to create, read, edit and delete flash cards. Cards can be seperated into different categories for optimal learning.",
+        "host": "Heroku",
+        "stack": {
+            "frontend": "React.js",
+            "database": "MongoDB",
+            "backend": "Node.js",
+            "middleware": "Express.js"
+        }
+    },
+    {
+        "name": "My Blog",
+        "url": "https://michaelolson.blog",
+        "description": "A blog where I can share solutions to problems and write tutorials",
+        "host": "AWS",
+        "stack": {
+            "frontend": "React.js",
+            "database": "AWS S3",
+            "backend": "Node.js",
+            "middleware": "Express.js"
+        }
+    }
+]
