@@ -4,7 +4,7 @@ import './terminal.css';
 const TerminalOptions = () => {
     return (
         <div id="terminal-options-container">
-            <h1 className="terminal-options-text">
+            {/* <h1 className="terminal-options-text">
                 <span className="terminal-options-text-commands">ls </span>- list my projects</h1>
             <h1 className="terminal-options-text">
                 <span className="terminal-options-text-commands">
@@ -19,7 +19,7 @@ const TerminalOptions = () => {
                     source <span className="terminal-options-text-var">[project name]</span>
                 </span> - view project source code</h1>
             <h1 className="terminal-options-text">
-                <span className="terminal-options-text-commands">exit</span> - return to home page</h1>
+                <span className="terminal-options-text-commands">exit</span> - return to home page</h1> */}
         </div>
     )
 }

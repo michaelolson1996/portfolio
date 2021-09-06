@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './projects.css';
-// import StarsContainer from './StarsContainer';
-// import CirclesContainer from './CirclesContainer';
 import Terminal from './Terminal';
 import TerminalOptions from './Terminal/TerminalOptions';
 
