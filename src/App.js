@@ -9,16 +9,16 @@ import Projects from './projects'
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <Switch>
           <Route exact path = '/' component = {Home} />
           <Route path = '/about' component = {About} />
           <Route path = '/contact' component = {Contact} />
           <Route path = '/projects' component = {Projects} />
         </Switch>
-      </React.Fragment>
-    )
-  }
-}
+      </>
+    );
+  };
+};
 
 export default App;

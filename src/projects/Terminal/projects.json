@@ -16,7 +16,7 @@
         "name": "Blog",
         "url": "https://michaelolson.blog",
         "source": "https://github.com/michaelolson1996/blog",
-        "description": "A blog where I can share solutions to problems and write tutorials",
+        "description": "A blog where I can share solutions to problems and write tutorials. This blog focuses on programming, networking, and operations",
         "host": "AWS",
         "stack": {
             "frontend": "React.js",

@@ -1,5 +1,4 @@
 import React from 'react';
-import './terminal.css';
 import projects from './projects.json';
  
 const getTab = (evt) => {
@@ -13,12 +12,10 @@ const getTab = (evt) => {
     } else if (evt.key === "Backspace") {
         if (currentCmd.length <= 2)
             evt.preventDefault();
-        return;
     } else if (evt.key === "Enter") {
         evt.preventDefault();
         if (currentCmd === "$ " || currentCmd === "\n$ ") {
             textarea.value += "\n$ ";
-            return;
         } else {
             if (/^\$ ls$/.test(currentCmd)) {
                 let projectStr = "\n\n"
@@ -27,10 +24,8 @@ const getTab = (evt) => {
                 })
                 projectStr += "\n$ "
                 textarea.value += projectStr
-                return;
             } else if (/^\$ exit$/.test(currentCmd)) {
                 document.getElementById("home-target").click()
-                return;
             } else if (/^\$ info [a-zA-Z]+/.test(currentCmd)) {
                 let parsedCmd = currentCmd.substr(7).toLowerCase()
                 let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd)
@@ -41,13 +36,15 @@ const getTab = (evt) => {
                     textarea.value = `${currentCmd}\n\nName : ${projectinfo[0].name}\n\n` +
                     `URL : ${projectinfo[0].url}\n\n` +
                     `Source : ${projectinfo[0].source}\n\n` +
-                    `Description : ${projectinfo[0].description}\n\n`
-                    Object.keys(projectinfo[0].stack).forEach(key => {
-                        textarea.value += `${key} : ${projectinfo[0].stack[key]}\n\n`
+                    `Description : ${projectinfo[0].description}\n\nStack : `
+                    Object.keys(projectinfo[0].stack).forEach((key, i) => {
+                        i == Object.keys(projectinfo[0].stack).length - 1 ?
+                            textarea.value += `${projectinfo[0].stack[key]}\n\n`
+                        :
+                            textarea.value += `${projectinfo[0].stack[key]}, `
                     })
                     textarea.value += "$ "
                 }
-                return;
             } else if (/^\$ open [a-zA-Z]+/.test(currentCmd)) {
                 let parsedCmd = currentCmd.substr(7).toLowerCase()
                 let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd)
@@ -58,9 +55,16 @@ const getTab = (evt) => {
                 textarea.value += "\n$ "
             } else if (/^\$ clear$/.test(currentCmd)) {
                 textarea.value = "$ "
-                return;
             } else if (/^\$ source [a-zA-Z]+/.test(currentCmd)) {
-
+                let parsedCmd = currentCmd.substr(7).toLowerCase()
+                let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd)
+                if (projectinfo.length > 0)
+                    window.open(projectinfo[0].source, "_blank")
+                else
+                    textarea.value += `\n\nNo projects found with name : ${parsedCmd}`
+                textarea.value += "\n$ "
+            } else {
+                textarea.value += `\n\nError : Unrecognized Command -> ${currentCmd}\n\n$ `
             }
         }
     }
@@ -83,6 +87,7 @@ const Terminal = () => {
             <div id="main-wrapper">
                 <div id="lineNo"></div>
                 <textarea
+                    spellCheck={false}
                     defaultValue={"$ "} 
                     id="terminal-textarea" 
                     onKeyDown={getTab} 

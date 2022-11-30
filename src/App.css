@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
 }
 
-/* @-keyframes grow-50{
+@-keyframes grow-50{
   from { left:100%; }
   to { left:50%; }
 }
@@ -62,7 +62,7 @@ body {
   100% {
     transform: translateX(0);
   }
-} */
+}
 
 .portfolio-content-wrap {
   width:100vw;
@@ -80,7 +80,7 @@ body {
   background-size: cover;
   z-index:-100;
 }
-/* 
+
 .page1 {
   height:100vh;
   width:100%;
@@ -108,7 +108,7 @@ body {
   " b b b b b b b b b b b b b b b b b b b b b "
   " b b b b b b b b b b b b b b b b b b b b b "
   " . . . . . . . . . . . . . . . . . . . . . "
-} */
+}
 
 .icon-container-main {
   position:absolute;
@@ -359,7 +359,7 @@ body {
   align-items:center;
 }
 
-/* .stats-bars {
+.stats-bars {
   width:100%;
   height:28px;
   position:relative;
@@ -379,9 +379,9 @@ body {
   align-items:center;
   color:white;
   border-bottom:1px solid white;
-} */
+}
 
-/* .stats-bars.inner-bar:hover {
+.stats-bars.inner-bar:hover {
   color:white;
   opacity:1;
 }
@@ -414,9 +414,9 @@ body {
   -webkit-animation-duration:2s;
   -webkit-animation-name: grow-90;
   left:10%;
-} */
+}
 
-/* @media only screen and (max-width:800px) {
+@media only screen and (max-width:800px) {
 
 }
 
@@ -432,7 +432,7 @@ body {
   }
 }
 
- */
+
 
 
 
