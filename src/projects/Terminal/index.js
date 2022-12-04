@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import projects from './projects.json';
+import TerminalOptions from './TerminalOptions';
  
 const getTab = (evt) => {
     let textarea = document.getElementById("terminal-textarea");
@@ -46,44 +47,46 @@ const getTab = (evt) => {
                     textarea.value += "$ "
                 }
             } else if (/^\$ open [a-zA-Z]+/.test(currentCmd)) {
-                let parsedCmd = currentCmd.substr(7).toLowerCase()
-                let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd)
+                let parsedCmd = currentCmd.substr(7).toLowerCase();
+                let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd);
                 if (projectinfo.length > 0)
-                    window.open(projectinfo[0].url, "_blank")
+                    window.open(projectinfo[0].url, "_blank");
                 else
-                    textarea.value += `\n\nNo projects found with name : ${parsedCmd}`
-                textarea.value += "\n$ "
+                    textarea.value += `\n\nNo projects found with name : ${parsedCmd}`;
+                textarea.value += "\n$ ";
             } else if (/^\$ clear$/.test(currentCmd)) {
-                textarea.value = "$ "
+                textarea.value = "$ ";
             } else if (/^\$ source [a-zA-Z]+/.test(currentCmd)) {
-                let parsedCmd = currentCmd.substr(7).toLowerCase()
-                let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd)
+                let parsedCmd = currentCmd.substr(7).toLowerCase();
+                let projectinfo = projects.filter(project => project.name.toLowerCase() === parsedCmd);
                 if (projectinfo.length > 0)
-                    window.open(projectinfo[0].source, "_blank")
+                    window.open(projectinfo[0].source, "_blank");
                 else
-                    textarea.value += `\n\nNo projects found with name : ${parsedCmd}`
-                textarea.value += "\n$ "
+                    textarea.value += `\n\nNo projects found with name : ${parsedCmd}`;
+                textarea.value += "\n$ ";
             } else {
-                textarea.value += `\n\nError : Unrecognized Command -> ${currentCmd}\n\n$ `
-            }
-        }
-    }
-}
+                textarea.value += `\n\nError : Unrecognized Command -> ${currentCmd}\n\n$ `;
+            };
+        };
+    };
+};
 
 const focusEndOfLine = (textarea) => {
     if (typeof textarea.selectionStart === "number")
-        textarea.selectionStart = textarea.selectionEnd = textarea.value.length
+        textarea.selectionStart = textarea.selectionEnd = textarea.value.length;
     else if (typeof textarea.createTextRange !== "undefined") {
-        textarea.focus()
-        let range = textarea.createTextRange()
-        range.collapse(false)
-        range.select()
-    }
-}
+        textarea.focus();
+        let range = textarea.createTextRange();
+        range.collapse(false);
+        range.select();
+    };
+};
 
 const Terminal = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <React.Fragment>
+        <>
             <div id="main-wrapper">
                 <div id="lineNo"></div>
                 <textarea
@@ -96,12 +99,24 @@ const Terminal = () => {
                         window.setTimeout(function() {
                             focusEndOfLine(document.getElementById("terminal-textarea"));
                         }, 1);
-                    } }>
+                    }}>
                 </textarea>
             </div>
             <a id="home-target" href="/"></a>
-        </React.Fragment>
-    )
+            {
+                isOpen ?
+                    <TerminalOptions setIsOpen={setIsOpen} />
+                :
+                    <button
+                        id={"show-commands-button"}
+                        onClick={() => setIsOpen(true)}
+                        type={"button"}
+                    >
+                        Commands
+                    </button>
+            }
+        </>
+    );
 }
 
 export default Terminal

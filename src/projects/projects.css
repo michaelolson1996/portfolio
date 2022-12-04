@@ -1,23 +1,11 @@
-#projects-container {
-    position:absolute;
-    top:0;
-    left:0;
-    height:100vh;
-    width:100vw;
-    background-color:rgb(26, 25, 25);
-    background-position: center;
-    background-size: cover;
-    z-index:-100;
-}
 
 #main-wrapper {
-    height: 700px;
-    width: 1000px;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: .7
+    top: 0;
+    left: 0;
+    opacity: .7;
 }
 
 #terminal-textarea {
@@ -25,49 +13,63 @@
     width: 100%;
     resize: none;
     background-color: black;
-    border: 1px solid rgb(67, 67, 255);
-    border-radius: 10px;
     padding: 15px;
     color: white;
     font-size: 30px;
     outline: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+#show-commands-button {
+    position: absolute;
+    top: 15px;
+    right: 70px;
+    padding: 12px 18px;
+    border: none;
+    background-color: rgb(31, 125, 247);
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #terminal-options-container {
     position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
+    top: 0;
     right: 0;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    width: 40%;
+    min-width: 400px;
+    height: 100vh;
+    color: #FFF;
+    background-color: rgba(0,0,0,0.4);
 }
 
 #terminal-options-title-wrap {
-    width: 100%;
-    border: 1px solid white;
-    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 12px;
 }
 
-#terminal-options-title {
-    color: white
+#terminal-options-close {
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.material-symbols-outlined {
+    background-color: none;
+    color: #FFF;
+    padding-right: 20px;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 .terminal-option-text-container {
-    border: 1px solid blue;
-    width: 100%;
+    padding: 24px 0 24px 24px;
+    border-bottom: 1px solid black;
 }
 
-.terminal-options-text {
-    font-size: 1.4rem;
-}
-
-.terminal-options-text-commands {
-    color: rgb(235, 19, 19);
-}.terminal-options-text {
-    color: white;
-} .terminal-options-text-var {
-    color: rgb(93, 93, 243);
+.terminal-options-text-var {
+    color: rgb(167, 35, 35)
 }

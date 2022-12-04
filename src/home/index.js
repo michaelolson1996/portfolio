@@ -1,10 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const generateTerminal = () => {
-
-}
-
 const Home = () => {
     return (
       <div className = "portfolio-content-wrap">
