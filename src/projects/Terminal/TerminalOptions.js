@@ -11,7 +11,7 @@ const TerminalOptions = (props) => {
                     id={"terminal-options-close"}
                     onClick={ () => setIsOpen(false) }
                 >
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         close
                     </span>
                 </button>

@@ -5,20 +5,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .7;
 }
 
 #terminal-textarea {
     height: 100%;
     width: 100%;
     resize: none;
-    background-color: black;
     padding: 15px;
     color: white;
     font-size: 30px;
     outline: none;
     box-sizing: border-box;
     border: none;
+    background-color:rgb(26, 25, 25);
 }
 
 #show-commands-button {
